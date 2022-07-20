@@ -5,7 +5,7 @@ const getUniqueUsername = (con, req, res) => {
     res.sendStatus(400);
   } else {
     con.query(
-      `SELECT COUNT(*) FROM userTable WHERE username = '${username}';`,
+      `SELECT COUNT(*) FROM usersTable WHERE username = '${username}';`,
       (err, result) => {
         if (err) {
           console.log(err);
