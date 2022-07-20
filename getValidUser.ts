@@ -12,12 +12,7 @@ const getValidUser = (con, req, res) => {
           console.log(err);
           res.sendStatus(500);
         } else {
-          res.status(200).json(result[0]["idUser"]);
-          if (result[0]["idUser"] === 1) {
-            res.status(200).json(true);
-          } else {
-            res.status(200).json(false);
-          }
+          res.status(200).json(result);
         }
       }
     );
