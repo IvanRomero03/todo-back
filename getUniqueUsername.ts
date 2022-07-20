@@ -11,7 +11,12 @@ const getUniqueUsername = (con, req, res) => {
           console.log(err);
           res.sendStatus(500);
         } else {
-          res.status(200).json(result);
+          console.log(result);
+          if (result[0]["COUNT(*)"] === 0) {
+            res.status(200).json(true);
+          } else {
+            res.status(200).json(false);
+          }
         }
       }
     );
