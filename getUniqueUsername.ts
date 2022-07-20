@@ -1,11 +1,11 @@
 const getUniqueUsername = (con, req, res) => {
-  const username = req.body.username;
-  if (!username) {
-    console.log("No username provided");
+  const name = req.body.name;
+  if (!name) {
+    console.log("No name provided");
     res.sendStatus(400);
   } else {
     con.query(
-      `SELECT COUNT(*) FROM usersTable WHERE username = '${username}';`,
+      `SELECT COUNT(*) FROM usersTable WHERE name = '${name}';`,
       (err, result) => {
         if (err) {
           console.log(err);
