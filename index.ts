@@ -25,6 +25,18 @@ app.post("/getValidUser", (req, res) => {
   getValidUserCallback(con, req, res);
 });
 
+const createUserCallback = require("./createUser.ts");
+
+app.post("/createUser", (req, res) => {
+  createUserCallback(con, req, res);
+});
+
+const getUniqueUsernameCallback = require("./getUniqueUsername.ts");
+
+app.post("/getUniqueUsername", (req, res) => {
+  getUniqueUsernameCallback(con, req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
