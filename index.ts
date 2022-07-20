@@ -11,6 +11,10 @@ const con = connection();
 
 const getTodosCallback = require("./getTodos.ts");
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.post("/getTodos", (req, res) => {
   getTodosCallback(con, req, res);
 });
