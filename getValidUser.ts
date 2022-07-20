@@ -6,7 +6,7 @@ const getValidUser = (con, req, res) => {
     res.sendStatus(400);
   } else {
     con.query(
-      `SELECT idUser FROM usersTable WHERE name = '${name}' AND password = '${password}';`,
+      `SELECT * FROM usersTable WHERE name = '${name}' AND password = '${password}';`,
       (err, result) => {
         if (err) {
           console.log(err);
