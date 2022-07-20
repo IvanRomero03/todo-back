@@ -2,11 +2,11 @@ const mysql = require("mysql");
 
 const getConnection = () => {
   const con = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT,
+    host: "portafolioweb.czklrrr38xte.us-east-1.rds.amazonaws.com",
+    user: "admin",
+    password: "basededatos",
+    database: "todos",
+    port: 3306,
   });
 
   if (con) {
