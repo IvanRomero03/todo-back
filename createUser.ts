@@ -12,6 +12,8 @@ const createUser = (con, req, res) => {
           console.log(err);
           res.sendStatus(500);
         } else {
+          const defaultPriority = require("./defaultPriority.ts");
+          defaultPriority(result.insertId, con);
           res.status(200).json(result.insertId);
         }
       }
