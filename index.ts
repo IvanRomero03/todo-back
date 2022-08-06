@@ -37,6 +37,12 @@ app.post("/getUniqueUsername", (req, res) => {
   getUniqueUsernameCallback(con, req, res);
 });
 
+const getTodoCallback = require("./getTodo.ts");
+
+app.post("/getTodo", (req, res) => {
+  getTodoCallback(con, req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
