@@ -12,8 +12,8 @@ const defaultPriority = (idUser, con) => {
   if (!idUser) {
     console.log("No idUser provided");
   } else {
-    defaultArray.map((priority) => {
-      con.query(
+    defaultArray.map(async (priority) => {
+      await con.query(
         `INSERT INTO priorityTable (idUser, priority, priorityColor) VALUES (${idUser}, '${priority.priority}', '${priority.priorityColor}');`,
         (err, result) => {
           if (err) {
