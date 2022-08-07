@@ -12,7 +12,9 @@ const con = connection();
 const getTodosCallback = require("./getTodos.ts");
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send(
+    "Hello There! This is a Todo API for my project. You can find the actual page here:"
+  );
 });
 
 app.post("/getTodos", (req, res) => {
