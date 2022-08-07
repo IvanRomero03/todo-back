@@ -9,3 +9,4 @@ const getTodo = (con, req, res) => {
     }
   });
 };
+module.exports = getTodo;
