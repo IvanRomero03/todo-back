@@ -57,6 +57,12 @@ app.post("/createTodo", (req, res) => {
   createTodoCallback(con, req, res);
 });
 
+const getUserPrioritiesCallback = require("./getUserPriorities.ts");
+
+app.post("/getUserPriorities", (req, res) => {
+  getUserPrioritiesCallback(con, req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
