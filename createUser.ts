@@ -15,8 +15,6 @@ const createUser = (con, req, res) => {
           const defaultPriority = require("./defaultPriority.ts");
           defaultPriority(result.insertId, con);
           res.status(200).json(result.insertId);
-          const defaultPriorityCallback = require("./defaultPriority.ts");
-          defaultPriorityCallback(result.insertId, con);
         }
       }
     );
