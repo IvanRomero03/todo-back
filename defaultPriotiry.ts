@@ -1,11 +1,7 @@
 const defaultArray = [
-  { priority: "Very Low", priorityColor: "purple" },
-  { priority: "Low", priorityColor: "teal" },
-  { priority: "Low-Medium", priorityColor: "green" },
+  { priority: "Low", priorityColor: "green" },
   { priority: "Medium", priorityColor: "yellow" },
-  { priority: "Medium-High", priorityColor: "orange" },
   { priority: "High", priorityColor: "red" },
-  { priority: "Very High", priorityColor: "pink" },
 ];
 
 const defaultPriority = (idUser, con) => {

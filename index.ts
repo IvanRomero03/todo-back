@@ -45,6 +45,12 @@ app.post("/getTodo", (req, res) => {
   getTodoCallback(con, req, res);
 });
 
+const defaultArrayCallback = require("./defaultPriority.ts");
+
+app.post("/defaultPriority", (req, res) => {
+  defaultArrayCallback(con, req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
