@@ -5,7 +5,7 @@ const getUserPriorities = (con, req, res) => {
     res.sendStatus(400);
   } else {
     con.query(
-      `SELECT * FROM priorityTable WHERE idUser = ${idUser};`,
+      `SELECT priority,priorityColor FROM priorityTable WHERE idUser = ${idUser};`,
       (err, result) => {
         if (err) {
           console.log(err);
