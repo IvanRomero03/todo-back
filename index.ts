@@ -63,6 +63,12 @@ app.post("/getUserPriorities", (req, res) => {
   getUserPrioritiesCallback(con, req, res);
 });
 
+const getPriorityIdCallback = require("./getPriorityId.ts");
+
+app.post("/getPriorityId", (req, res) => {
+  getPriorityIdCallback(con, req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
