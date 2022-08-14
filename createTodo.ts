@@ -24,3 +24,4 @@ const createTodo = (con, req, res) => {
     );
   }
 };
+module.exports = createTodo;

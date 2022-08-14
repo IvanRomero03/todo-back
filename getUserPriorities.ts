@@ -17,3 +17,4 @@ const getUserPriorities = (con, req, res) => {
     );
   }
 };
+module.exports = getUserPriorities;
