@@ -45,6 +45,12 @@ app.post("/getTodo", (req, res) => {
   getTodoCallback(con, req, res);
 });
 
+const createPriorityCallback = require("./createPriority.ts");
+
+app.post("/createPriority", (req, res) => {
+  createPriorityCallback(con, req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
