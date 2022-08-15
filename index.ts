@@ -81,6 +81,12 @@ app.post("/getTodosByPriority", (req, res) => {
   getTodosByPriorityCallback(con, req, res);
 });
 
+const getTodosByUserCallback = require("./getTodosByUser.ts");
+
+app.post("/getTodosByUser", (req, res) => {
+  getTodosByUserCallback(con, req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
