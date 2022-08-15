@@ -13,7 +13,10 @@ const getTodosCallback = require("./getTodos.ts");
 
 app.get("/", (req, res) => {
   res.send(
-    "Hello There! This is a Todo API for my project. You can find the actual page here:"
+    "Hello There! This is a Todo API for my project. You can find the actual page here:" +
+      "<a href='https://todo-list-ivanromero03.vercel.app/'>Todo-list App</a>" +
+      "<br>You can find the source code here:" +
+      "<a href='https://github.com/IvanRomero03/todo-back.git'>Todo-list Github</a>"
   );
 });
 
