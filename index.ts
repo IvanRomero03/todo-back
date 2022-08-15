@@ -81,10 +81,10 @@ app.post("/getTodosByPriority", (req, res) => {
   getTodosByPriorityCallback(con, req, res);
 });
 
-const getUserPrioritiesIdsCallback = require("./getUserPrioritiesIds.ts");
+const getUserPrioritesIdsCallback = require("./getUserPrioritesIds.ts");
 
-app.post("/getUserPrioritiesIds", (req, res) => {
-  getUserPrioritiesIdsCallback(con, req, res);
+app.post("/getUserPrioritesIds", (req, res) => {
+  getUserPrioritesIdsCallback(con, req, res);
 });
 
 app.listen(PORT, () => {
