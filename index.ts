@@ -93,6 +93,18 @@ app.post("/updateTodo", (req, res) => {
   updateTodoCallback(con, req, res);
 });
 
+const deleteTodoCallback = require("./deleteTodo.ts");
+
+app.post("/deleteTodo", (req, res) => {
+  deleteTodoCallback(con, req, res);
+});
+
+const deletePriorityCallback = require("./deletePriority.ts");
+
+app.post("/deletePriority", (req, res) => {
+  deletePriorityCallback(con, req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });

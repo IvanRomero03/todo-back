@@ -10,9 +10,10 @@ const updateTodo = (con, req, res) => {
     return;
   } else {
     con.query(
-      `UPDATE todoTable SET idUser = ${idUser}, priority = ${priority}, title = "${title}", description = "${description}", status = ${status} WHERE idTodo = ${idTodo}`,
+      `UPDATE todoTable SET priority = ${priority}, title = "${title}", description = "${description}", status = "${status}" WHERE idTodo = ${idTodo};`,
       (err, result) => {
         if (err) {
+          console.log(err);
           res.status(500).send(err);
           return;
         } else {
