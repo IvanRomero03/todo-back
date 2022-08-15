@@ -69,6 +69,18 @@ app.post("/getPriorityId", (req, res) => {
   getPriorityIdCallback(con, req, res);
 });
 
+const getTodosByStatusCallback = require("./getTodosByStatus.ts");
+
+app.post("/getTodosByStatus", (req, res) => {
+  getTodosByStatusCallback(con, req, res);
+});
+
+const getTodosByPriorityCallback = require("./getTodosByPriority.ts");
+
+app.post("/getTodosByPriority", (req, res) => {
+  getTodosByPriorityCallback(con, req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
