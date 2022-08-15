@@ -87,6 +87,12 @@ app.post("/getUserPrioritesIds", (req, res) => {
   getUserPrioritesIdsCallback(con, req, res);
 });
 
+const updateTodoCallback = require("./updateTodo.ts");
+
+app.post("/updateTodo", (req, res) => {
+  updateTodoCallback(con, req, res);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
