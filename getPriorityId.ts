@@ -13,7 +13,11 @@ const getPriorityId = (con, req, res) => {
           console.log(err);
           res.sendStatus(500);
         } else {
-          res.status(200).json(result[0].idPriority);
+          if (result.length === 0) {
+            res.sendStatus(404);
+          } else {
+            res.status(200).json(result[0]?.idPriority);
+          }
         }
       }
     );
