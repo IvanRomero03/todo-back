@@ -9,7 +9,11 @@ const createTodo = (con, req, res) => {
     console.log(
       "No idUser or title or description or status or priority provided"
     );
-    res.sendStatus(400);
+    res.status(400).json({
+      message:
+        "No idUser or title or description or status or priority provided",
+      recivedData: req.body,
+    });
   } else {
     con.query(
       `INSERT INTO todoTable (idUser, title, description, status, priority) VALUES (${idUser}, '${title}', '${description}', '${status}', ${priority});`,
